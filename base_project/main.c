@@ -73,18 +73,19 @@ ESOS_CHILD_TASK(turnOnLights, u16_lightsAndTime){
     LED1 = (u16_lightsAndTime[u8_mode][u8_state] & 0x8000 && !esos_IsUserFlagSet(showEW)); //red light North/South view
     LED2 = (u16_lightsAndTime[u8_mode][u8_state] & 0x4000 && !esos_IsUserFlagSet(showEW)); //light NS
     LED3 = (u16_lightsAndTime[u8_mode][u8_state] & 0x2000 && !esos_IsUserFlagSet(showEW)); //green NS
-    while(u16_lightsAndTime[u8_mode][u8_state] & 0x1000 && !esos_IsUserFlagSet(showEW)){ //blinking green NS
-        LED3 = !LED3;
-        ESOS_TASK_WAIT_TICKS(250);
-    }
     LED1 = (u16_lightsAndTime[u8_mode][u8_state] & 0x0800 && esos_IsUserFlagSet(showEW)); //red light East/West view
     LED2 = (u16_lightsAndTime[u8_mode][u8_state] & 0x0400 && esos_IsUserFlagSet(showEW)); //amber EW
     LED3 = (u16_lightsAndTime[u8_mode][u8_state] & 0x0200 && esos_IsUserFlagSet(showEW)); //green EW
-    while(u16_lightsAndTime[u8_mode][u8_state] & 0x0100 && esos_IsUserFlagSet(showEW)){ //blinking green EW
-        LED3 = !LED3;
-        ESOS_TASK_WAIT_TICKS(250);
-    }
+    
     unsigned short u8_time = (u16_lightsAndTime[u8_mode][u8_state] && 0x00FF); //strips off mode information leaving time
     ESOS_TASK_WAIT_TICKS(u8_time * 1000);
+        while(u16_lightsAndTime[u8_mode][u8_state] & 0x1000 && !esos_IsUserFlagSet(showEW)){ //blinking green NS
+        LED3 = !LED3;
+        ESOS_TASK_WAIT_TICKS(250);
+        }
+        while(u16_lightsAndTime[u8_mode][u8_state] & 0x0100 && esos_IsUserFlagSet(showEW)){ //blinking green EW
+        LED3 = !LED3;
+        ESOS_TASK_WAIT_TICKS(250);
+        }
     ESOS_TASK_END();
 }
