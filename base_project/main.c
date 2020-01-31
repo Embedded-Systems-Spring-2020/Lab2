@@ -5,6 +5,8 @@
  * Created on January 28, 2020, 8:08 PM
  */
 
+#define HARDWARE_PLATFORM EMBEDDED_F14
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <p33EP512GP806.h>
