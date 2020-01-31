@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../../esos/src/esos.c ../../esos/src/esos_comm.c ../../esos/src/pic24/esos_pic24_irq.c ../../esos/src/pic24/esos_pic24_rs232.c ../../esos/src/pic24/esos_pic24_tick.c ../../esos/src/pic24/esos_pic24_i2c.c ../../esos/src/pic24/esos_pic24_spi.c ../../esos/src/esos_cb.c ../../esos/src/esos_mail.c ../../lib/src/pic24_clockfreq.c ../../lib/src/pic24_configbits.c ../../lib/src/pic24_adc.c ../main.c
+SOURCEFILES_QUOTED_IF_SPACED=../../esos/src/esos.c ../../esos/src/esos_comm.c ../../esos/src/pic24/esos_pic24_irq.c ../../esos/src/pic24/esos_pic24_rs232.c ../../esos/src/pic24/esos_pic24_tick.c ../../esos/src/pic24/esos_pic24_i2c.c ../../esos/src/pic24/esos_pic24_spi.c ../../esos/src/esos_cb.c ../../esos/src/esos_mail.c ../main.c ../../lib/src/pic24_clockfreq.c ../../lib/src/pic24_configbits.c ../../lib/src/pic24_adc.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1022787335/esos.o ${OBJECTDIR}/_ext/1022787335/esos_comm.o ${OBJECTDIR}/_ext/750133316/esos_pic24_irq.o ${OBJECTDIR}/_ext/750133316/esos_pic24_rs232.o ${OBJECTDIR}/_ext/750133316/esos_pic24_tick.o ${OBJECTDIR}/_ext/750133316/esos_pic24_i2c.o ${OBJECTDIR}/_ext/750133316/esos_pic24_spi.o ${OBJECTDIR}/_ext/1022787335/esos_cb.o ${OBJECTDIR}/_ext/1022787335/esos_mail.o ${OBJECTDIR}/_ext/957557178/pic24_clockfreq.o ${OBJECTDIR}/_ext/957557178/pic24_configbits.o ${OBJECTDIR}/_ext/957557178/pic24_adc.o ${OBJECTDIR}/_ext/1472/main.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1022787335/esos.o.d ${OBJECTDIR}/_ext/1022787335/esos_comm.o.d ${OBJECTDIR}/_ext/750133316/esos_pic24_irq.o.d ${OBJECTDIR}/_ext/750133316/esos_pic24_rs232.o.d ${OBJECTDIR}/_ext/750133316/esos_pic24_tick.o.d ${OBJECTDIR}/_ext/750133316/esos_pic24_i2c.o.d ${OBJECTDIR}/_ext/750133316/esos_pic24_spi.o.d ${OBJECTDIR}/_ext/1022787335/esos_cb.o.d ${OBJECTDIR}/_ext/1022787335/esos_mail.o.d ${OBJECTDIR}/_ext/957557178/pic24_clockfreq.o.d ${OBJECTDIR}/_ext/957557178/pic24_configbits.o.d ${OBJECTDIR}/_ext/957557178/pic24_adc.o.d ${OBJECTDIR}/_ext/1472/main.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1022787335/esos.o ${OBJECTDIR}/_ext/1022787335/esos_comm.o ${OBJECTDIR}/_ext/750133316/esos_pic24_irq.o ${OBJECTDIR}/_ext/750133316/esos_pic24_rs232.o ${OBJECTDIR}/_ext/750133316/esos_pic24_tick.o ${OBJECTDIR}/_ext/750133316/esos_pic24_i2c.o ${OBJECTDIR}/_ext/750133316/esos_pic24_spi.o ${OBJECTDIR}/_ext/1022787335/esos_cb.o ${OBJECTDIR}/_ext/1022787335/esos_mail.o ${OBJECTDIR}/_ext/1472/main.o ${OBJECTDIR}/_ext/957557178/pic24_clockfreq.o ${OBJECTDIR}/_ext/957557178/pic24_configbits.o ${OBJECTDIR}/_ext/957557178/pic24_adc.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1022787335/esos.o.d ${OBJECTDIR}/_ext/1022787335/esos_comm.o.d ${OBJECTDIR}/_ext/750133316/esos_pic24_irq.o.d ${OBJECTDIR}/_ext/750133316/esos_pic24_rs232.o.d ${OBJECTDIR}/_ext/750133316/esos_pic24_tick.o.d ${OBJECTDIR}/_ext/750133316/esos_pic24_i2c.o.d ${OBJECTDIR}/_ext/750133316/esos_pic24_spi.o.d ${OBJECTDIR}/_ext/1022787335/esos_cb.o.d ${OBJECTDIR}/_ext/1022787335/esos_mail.o.d ${OBJECTDIR}/_ext/1472/main.o.d ${OBJECTDIR}/_ext/957557178/pic24_clockfreq.o.d ${OBJECTDIR}/_ext/957557178/pic24_configbits.o.d ${OBJECTDIR}/_ext/957557178/pic24_adc.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1022787335/esos.o ${OBJECTDIR}/_ext/1022787335/esos_comm.o ${OBJECTDIR}/_ext/750133316/esos_pic24_irq.o ${OBJECTDIR}/_ext/750133316/esos_pic24_rs232.o ${OBJECTDIR}/_ext/750133316/esos_pic24_tick.o ${OBJECTDIR}/_ext/750133316/esos_pic24_i2c.o ${OBJECTDIR}/_ext/750133316/esos_pic24_spi.o ${OBJECTDIR}/_ext/1022787335/esos_cb.o ${OBJECTDIR}/_ext/1022787335/esos_mail.o ${OBJECTDIR}/_ext/957557178/pic24_clockfreq.o ${OBJECTDIR}/_ext/957557178/pic24_configbits.o ${OBJECTDIR}/_ext/957557178/pic24_adc.o ${OBJECTDIR}/_ext/1472/main.o
+OBJECTFILES=${OBJECTDIR}/_ext/1022787335/esos.o ${OBJECTDIR}/_ext/1022787335/esos_comm.o ${OBJECTDIR}/_ext/750133316/esos_pic24_irq.o ${OBJECTDIR}/_ext/750133316/esos_pic24_rs232.o ${OBJECTDIR}/_ext/750133316/esos_pic24_tick.o ${OBJECTDIR}/_ext/750133316/esos_pic24_i2c.o ${OBJECTDIR}/_ext/750133316/esos_pic24_spi.o ${OBJECTDIR}/_ext/1022787335/esos_cb.o ${OBJECTDIR}/_ext/1022787335/esos_mail.o ${OBJECTDIR}/_ext/1472/main.o ${OBJECTDIR}/_ext/957557178/pic24_clockfreq.o ${OBJECTDIR}/_ext/957557178/pic24_configbits.o ${OBJECTDIR}/_ext/957557178/pic24_adc.o
 
 # Source Files
-SOURCEFILES=../../esos/src/esos.c ../../esos/src/esos_comm.c ../../esos/src/pic24/esos_pic24_irq.c ../../esos/src/pic24/esos_pic24_rs232.c ../../esos/src/pic24/esos_pic24_tick.c ../../esos/src/pic24/esos_pic24_i2c.c ../../esos/src/pic24/esos_pic24_spi.c ../../esos/src/esos_cb.c ../../esos/src/esos_mail.c ../../lib/src/pic24_clockfreq.c ../../lib/src/pic24_configbits.c ../../lib/src/pic24_adc.c ../main.c
+SOURCEFILES=../../esos/src/esos.c ../../esos/src/esos_comm.c ../../esos/src/pic24/esos_pic24_irq.c ../../esos/src/pic24/esos_pic24_rs232.c ../../esos/src/pic24/esos_pic24_tick.c ../../esos/src/pic24/esos_pic24_i2c.c ../../esos/src/pic24/esos_pic24_spi.c ../../esos/src/esos_cb.c ../../esos/src/esos_mail.c ../main.c ../../lib/src/pic24_clockfreq.c ../../lib/src/pic24_configbits.c ../../lib/src/pic24_adc.c
 
 
 
@@ -158,6 +158,13 @@ ${OBJECTDIR}/_ext/1022787335/esos_mail.o: ../../esos/src/esos_mail.c  nbproject/
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../esos/src/esos_mail.c  -o ${OBJECTDIR}/_ext/1022787335/esos_mail.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1022787335/esos_mail.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=coff -DBUILT_ON_ESOS -DXPRJ_app_childtask=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I"../../lib/include" -I"../../esos/include" -I"../../esos/include/pic24" -I"../../esos/include/pc" -DBUILT_ON_ESOS -msmart-io=1 -Wall -msfr-warn=off    -mdfp=${DFP_DIR}/xc16
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1022787335/esos_mail.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/_ext/1472/main.o: ../main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/main.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../main.c  -o ${OBJECTDIR}/_ext/1472/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1472/main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=coff -DBUILT_ON_ESOS -DXPRJ_app_childtask=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I"../../lib/include" -I"../../esos/include" -I"../../esos/include/pic24" -I"../../esos/include/pc" -DBUILT_ON_ESOS -msmart-io=1 -Wall -msfr-warn=off    -mdfp=${DFP_DIR}/xc16
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
 ${OBJECTDIR}/_ext/957557178/pic24_clockfreq.o: ../../lib/src/pic24_clockfreq.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/957557178" 
 	@${RM} ${OBJECTDIR}/_ext/957557178/pic24_clockfreq.o.d 
@@ -178,13 +185,6 @@ ${OBJECTDIR}/_ext/957557178/pic24_adc.o: ../../lib/src/pic24_adc.c  nbproject/Ma
 	@${RM} ${OBJECTDIR}/_ext/957557178/pic24_adc.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../lib/src/pic24_adc.c  -o ${OBJECTDIR}/_ext/957557178/pic24_adc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/957557178/pic24_adc.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=coff -DBUILT_ON_ESOS -DXPRJ_app_childtask=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I"../../lib/include" -I"../../esos/include" -I"../../esos/include/pic24" -I"../../esos/include/pc" -DBUILT_ON_ESOS -msmart-io=1 -Wall -msfr-warn=off    -mdfp=${DFP_DIR}/xc16
 	@${FIXDEPS} "${OBJECTDIR}/_ext/957557178/pic24_adc.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/1472/main.o: ../main.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
-	@${RM} ${OBJECTDIR}/_ext/1472/main.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1472/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../main.c  -o ${OBJECTDIR}/_ext/1472/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1472/main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=coff -DBUILT_ON_ESOS -DXPRJ_app_childtask=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I"../../lib/include" -I"../../esos/include" -I"../../esos/include/pic24" -I"../../esos/include/pc" -DBUILT_ON_ESOS -msmart-io=1 -Wall -msfr-warn=off    -mdfp=${DFP_DIR}/xc16
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 else
 ${OBJECTDIR}/_ext/1022787335/esos.o: ../../esos/src/esos.c  nbproject/Makefile-${CND_CONF}.mk
@@ -250,6 +250,13 @@ ${OBJECTDIR}/_ext/1022787335/esos_mail.o: ../../esos/src/esos_mail.c  nbproject/
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../esos/src/esos_mail.c  -o ${OBJECTDIR}/_ext/1022787335/esos_mail.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1022787335/esos_mail.o.d"        -g -omf=coff -DBUILT_ON_ESOS -DXPRJ_app_childtask=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I"../../lib/include" -I"../../esos/include" -I"../../esos/include/pic24" -I"../../esos/include/pc" -DBUILT_ON_ESOS -msmart-io=1 -Wall -msfr-warn=off    -mdfp=${DFP_DIR}/xc16
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1022787335/esos_mail.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/_ext/1472/main.o: ../main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/main.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../main.c  -o ${OBJECTDIR}/_ext/1472/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1472/main.o.d"        -g -omf=coff -DBUILT_ON_ESOS -DXPRJ_app_childtask=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I"../../lib/include" -I"../../esos/include" -I"../../esos/include/pic24" -I"../../esos/include/pc" -DBUILT_ON_ESOS -msmart-io=1 -Wall -msfr-warn=off    -mdfp=${DFP_DIR}/xc16
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
 ${OBJECTDIR}/_ext/957557178/pic24_clockfreq.o: ../../lib/src/pic24_clockfreq.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/957557178" 
 	@${RM} ${OBJECTDIR}/_ext/957557178/pic24_clockfreq.o.d 
@@ -270,13 +277,6 @@ ${OBJECTDIR}/_ext/957557178/pic24_adc.o: ../../lib/src/pic24_adc.c  nbproject/Ma
 	@${RM} ${OBJECTDIR}/_ext/957557178/pic24_adc.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../lib/src/pic24_adc.c  -o ${OBJECTDIR}/_ext/957557178/pic24_adc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/957557178/pic24_adc.o.d"        -g -omf=coff -DBUILT_ON_ESOS -DXPRJ_app_childtask=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I"../../lib/include" -I"../../esos/include" -I"../../esos/include/pic24" -I"../../esos/include/pc" -DBUILT_ON_ESOS -msmart-io=1 -Wall -msfr-warn=off    -mdfp=${DFP_DIR}/xc16
 	@${FIXDEPS} "${OBJECTDIR}/_ext/957557178/pic24_adc.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/1472/main.o: ../main.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
-	@${RM} ${OBJECTDIR}/_ext/1472/main.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1472/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../main.c  -o ${OBJECTDIR}/_ext/1472/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1472/main.o.d"        -g -omf=coff -DBUILT_ON_ESOS -DXPRJ_app_childtask=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I"../../lib/include" -I"../../esos/include" -I"../../esos/include/pic24" -I"../../esos/include/pc" -DBUILT_ON_ESOS -msmart-io=1 -Wall -msfr-warn=off    -mdfp=${DFP_DIR}/xc16
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 

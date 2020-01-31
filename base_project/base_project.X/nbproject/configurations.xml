@@ -35,6 +35,7 @@
         <itemPath>../../lib/include/pic24_uart.h</itemPath>
         <itemPath>../../lib/include/pic24_adc.h</itemPath>
       </logicalFolder>
+      <itemPath>../../lib/include/revF14.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

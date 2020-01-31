@@ -10,6 +10,7 @@
 #include <p33EP512GP806.h>
 #include <esos.h>
 #include <pic24_all.h>
+#include "revF14.h"
 
 #define rushHour ESOS_USER_FLAG_1
 #define turnSignal ESOS_USER_FLAG_2
@@ -51,7 +52,7 @@ ESOS_USER_TASK(loadStopLightInfo){
         else if (esos_IsUserFlagClear(rushHour) && esos_IsUserFlagSet(turnSignal)){ //turn signal but not rush hour
             u8_mode = 1;
         }
-        else if (esos_IsUserFlagSet(rushHour) && esos_IsUserFlagClear(turnSignal))){ //rush hour but not turn signal
+        else if (esos_IsUserFlagSet(rushHour) && esos_IsUserFlagClear(turnSignal)){ //rush hour but not turn signal
             u8_mode = 2;
         }
         else {
@@ -68,7 +69,7 @@ ESOS_USER_TASK(loadStopLightInfo){
 }
 
 ESOS_CHILD_TASK(turnOnLights, u16_lightsAndTime){
-    EOS_TASK_BEGIN();
+    ESOS_TASK_BEGIN();
     LED1 = (u16_lightsAndTime[u8_mode][u8_state] & 0x8000 && !esos_IsUserFlagSet(showEW)); //red light North/South view
     LED2 = (u16_lightsAndTime[u8_mode][u8_state] & 0x4000 && !esos_IsUserFlagSet(showEW)); //light NS
     LED3 = (u16_lightsAndTime[u8_mode][u8_state] & 0x2000 && !esos_IsUserFlagSet(showEW)); //green NS
