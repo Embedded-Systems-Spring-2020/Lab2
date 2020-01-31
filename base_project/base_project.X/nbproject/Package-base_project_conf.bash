@@ -6,7 +6,7 @@
 
 # Macros
 TOP=`pwd`
-CND_CONF=app_childtask
+CND_CONF=base_project_conf
 CND_DISTDIR=dist
 TMPDIR=build/${CND_CONF}/${IMAGE_TYPE}/tmp-packaging
 TMPDIRNAME=tmp-packaging

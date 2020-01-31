@@ -27,11 +27,11 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 PROJECTNAME=base_project.X
 
 # Active Configuration
-DEFAULTCONF=app_childtask
+DEFAULTCONF=base_project_conf
 CONF=${DEFAULTCONF}
 
 # All Configurations
-ALLCONFS=app_childtask app_ds1631 app_ds1722 app_echo1 app_flashled app_irqs app_reverse app_semaphore1 app_semaphore2 app_timerLEDecho esos_skel 
+ALLCONFS=base_project_conf 
 
 
 # build
@@ -45,33 +45,13 @@ ALLCONFS=app_childtask app_ds1631 app_ds1722 app_echo1 app_flashled app_irqs app
 
 # clobber
 .clobber-impl: .clobber-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=app_childtask clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=app_ds1631 clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=app_ds1722 clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=app_echo1 clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=app_flashled clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=app_irqs clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=app_reverse clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=app_semaphore1 clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=app_semaphore2 clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=app_timerLEDecho clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=esos_skel clean
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=base_project_conf clean
 
 
 
 # all
 .all-impl: .all-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=app_childtask build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=app_ds1631 build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=app_ds1722 build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=app_echo1 build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=app_flashled build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=app_irqs build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=app_reverse build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=app_semaphore1 build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=app_semaphore2 build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=app_timerLEDecho build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=esos_skel build
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=base_project_conf build
 
 
 
