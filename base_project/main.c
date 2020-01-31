@@ -26,7 +26,7 @@
  *(Rns, Ans, Gns, Tns, Rew, Aew, Gew, Tew)where R=Red light on, A=Amber, G=Green, T=Turn Signal,
  *ns and ew are the views controlled by SW3.
  *The LSB is the time for that state in seconds*/
-const int u16_lightsAndTime = 
+const int u16_lightsAndTime[4][8] = 
     {{0x810A, 0x821E, 0x8403, 0x8801, 0x180A, 0x281E, 0x4803, 0x8801},
      {0x810A, 0x8210, 0x8403, 0x8800, 0x180A, 0x2810, 0x4803, 0x8800},
      {0x8100, 0x821E, 0x8403, 0x8801, 0x1800, 0x281E, 0x4803, 0x8801},
