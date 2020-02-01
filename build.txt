@@ -1,0 +1,1 @@
+scons build/esos_embeddedF14_33EP512GP806/BUILD_DIR/main.hex
