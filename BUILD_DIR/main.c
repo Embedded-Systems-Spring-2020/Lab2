@@ -1,9 +1,3 @@
-/* 
- * File:   stoplightMain.c
- * Author: Andrew Yingst
- *
- * Created on January 28, 2020, 8:08 PM
- */
 
 #include <esos.h>
 #include "esos_pic24.h"
@@ -93,8 +87,6 @@ void user_init(void){
     CONFIG_LED3();
     
     esos_RegisterTask(loadStopLightInfo);
-    //esos_RegisterTask(turnSignalBlink);
-    //esos_RegisterTimer(turnSignalTimer, 250);
 }
 
 
