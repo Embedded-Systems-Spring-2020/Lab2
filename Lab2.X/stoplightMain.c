@@ -1,9 +1,3 @@
-/* 
- * File:   stoplightMain.c
- * Author: Andrew Yingst
- *
- * Created on January 28, 2020, 8:08 PM
- */
 
 #include <stdio.h>
 #include <stdlib.h>
