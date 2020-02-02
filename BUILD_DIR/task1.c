@@ -33,7 +33,7 @@ void reset_LEDs();
 
 ESOS_USER_TASK(pollswitches) {
     ESOS_TASK_BEGIN();
-    while (1) {
+    for (;;) {
         ESOS_TASK_WAIT_TICKS(25);
         SW3_PRESSED ? esos_SetUserFlag(showEW) : esos_ClearUserFlag(showEW);
     }
@@ -43,7 +43,7 @@ ESOS_USER_TASK(pollswitches) {
 ESOS_USER_TASK(trackstate) {
     ESOS_TASK_BEGIN();
 
-    while (1) {
+    for (;;) {
         //Determine how long to wait for a given state
         //Time in ms is given by the LSB
         uint8_t u8_msTime = au16_colorAndTime[u8_state] & 0x00FF;
