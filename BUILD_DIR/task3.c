@@ -33,29 +33,38 @@ uint16_t au16_colorAndTime[2][STATES] ={
 uint8_t u8_state = 0;
 
 void reset_LEDs();
+uint8_t checkIfTurnSignal(uint16_t);
 
 ESOS_USER_TASK(pollswitches) {
     ESOS_TASK_BEGIN();
     for (;;) {
-        ESOS_TASK_WAIT_TICKS(25);
         SW3_PRESSED ? esos_SetUserFlag(showEW) : esos_ClearUserFlag(showEW);
         SW1_PRESSED ? esos_SetUserFlag(rushHour) : esos_ClearUserFlag(rushHour);
+        SW2_PRESSED ? esos_SetUserFlag(turnSignal) : esos_ClearUserFlag(turnSignal);
+        ESOS_TASK_WAIT_TICKS(25);
     }
     ESOS_TASK_END();
 }
 
 ESOS_USER_TASK(trackstate) {
     ESOS_TASK_BEGIN();
-
     for (;;) {
-
         uint8_t u8_msTime;
-        if (esos_IsUserFlagSet(rushHour)) {
-            u8_msTime = au16_colorAndTime[1][u8_state] & 0x00FF;
+        uint8_t u8_rushHourSet = esos_IsUserFlagSet(rushHour) >= 1;
+        if (u8_rushHourSet) {
+            u8_msTime = au16_colorAndTime[u8_rushHourSet][u8_state] & 0x00FF;
         } else {
-            u8_msTime = au16_colorAndTime[0][u8_state] & 0x00FF;
+            u8_msTime = au16_colorAndTime[u8_rushHourSet][u8_state] & 0x00FF;
         }
 
+        //If turnSignal button not pressed, skip turn signal state
+        if (esos_IsUserFlagClear(turnSignal) 
+            && checkIfTurnSignal(au16_colorAndTime[u8_rushHourSet][u8_state])) {
+            u8_state++;
+            continue;
+        }
+
+        //DEBUG: Outputs to bully bootloader
         printf("State time: %d\n", u8_msTime);
         
         ESOS_TASK_WAIT_TICKS(u8_msTime * 1000);
@@ -66,6 +75,10 @@ ESOS_USER_TASK(trackstate) {
     ESOS_TASK_END();
 }
 
+//This child task represents the special draw state for turn signals.
+//If the turn signal is active, the drawing rules change for the LEDs.
+//While we are in the turn signal state, only focus on drawing the 
+//red and green LEDs, and replace the parent draw task with this one. 
 ESOS_CHILD_TASK(drawturnsignal, uint16_t u16_currentColorAndTime) {
     static uint16_t u16_totalTicksWaited = 0;
     ESOS_TASK_BEGIN();
@@ -84,10 +97,9 @@ ESOS_CHILD_TASK(drawturnsignal, uint16_t u16_currentColorAndTime) {
             u16_color = (u16_currentColorAndTime & 0xF000) >> 12;
         }
         
-        //If we draw red, kill the green
         if (u16_color == 8) {
             LED1 = 1;
-            LED3 = 1;
+            LED3 = 1;  //If we draw red, kill the green
         } else {
             LED3 = !LED3;
         }
@@ -106,35 +118,25 @@ ESOS_USER_TASK(drawLEDs) {
     for (;;) {
         uint16_t u16_color;
         uint8_t u8_mode = esos_IsUserFlagSet(rushHour) >= 1;  //unreliable return value, so force 0 or 1
-
         uint16_t u16_currentColorAndTime = au16_colorAndTime[u8_mode][u8_state];
        
         //Detect turn signal state
-        if ((u16_currentColorAndTime & 0xF000) == 0x1000
-        || (u16_currentColorAndTime & 0x0F00) == 0x0100) {
+        if (checkIfTurnSignal(u16_currentColorAndTime)) {
             ESOS_ALLOCATE_CHILD_TASK(th_child);
             ESOS_TASK_SPAWN_AND_WAIT(th_child, drawturnsignal, u16_currentColorAndTime);
             continue;
         }
 
         reset_LEDs();
-
-        //TODO: Refactor to use variable
         if (esos_IsUserFlagSet(showEW)) {
-            u16_color = (au16_colorAndTime[u8_mode][u8_state] & 0x0F00) >> 8;
+            u16_color = (u16_currentColorAndTime & 0x0F00) >> 8;
         } else {
-            u16_color = (au16_colorAndTime[u8_mode][u8_state] & 0xF000) >> 12;
+            u16_color = (u16_currentColorAndTime & 0xF000) >> 12;
         }
 
-
-
-        if (u16_color == 8) {
-            LED1 = 1;
-        } else if (u16_color == 4) {
-            LED2 = 1;
-        } else if (u16_color == 2) {
-            LED3 = 0;
-        }
+        if (u16_color == 8) LED1 = 1;
+        if (u16_color == 4) LED2 = 1;
+        if (u16_color == 2) LED3 = 0;
 
         ESOS_TASK_WAIT_TICKS(25);
     }
@@ -159,4 +161,8 @@ void reset_LEDs() {
     LED1 = 0;
     LED2 = 0;
     LED3 = 1;
+}
+
+uint8_t checkIfTurnSignal(uint16_t state) {
+    return ((state & 0xF000) == 0x1000 || (state & 0x0F00) == 0x0100);
 }
